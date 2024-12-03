@@ -203,16 +203,25 @@ socket.on("activeGame", (arg) => {
         activeGame = 0;
         document.getElementById("valorantControl").style.display = "none";
         document.getElementById("overwatchControl").style.display = "none";
+        document.getElementById("leagueControl").style.display = "none";
     }
     if (arg == "valorant"){
         activeGame = 1;
         document.getElementById("valorantControl").style.display = "block";
         document.getElementById("overwatchControl").style.display = "none";
+        document.getElementById("leagueControl").style.display = "none";
     }
     if (arg == "overwatch2"){
         activeGame = 2;
         document.getElementById("overwatchControl").style.display = "block";
         document.getElementById("valorantControl").style.display = "none";
+        document.getElementById("leagueControl").style.display = "none";
+    }
+    if (arg == "leagueOfLegends") {
+        activeGame = 3;
+        document.getElementById("overwatchControl").style.display = "none";
+        document.getElementById("valorantControl").style.display = "none";
+        document.getElementById("leagueControl").style.display = "block";
     }
 })
 
